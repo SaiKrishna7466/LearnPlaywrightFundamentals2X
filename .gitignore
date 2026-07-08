@@ -1,0 +1,17 @@
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Playwright
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
