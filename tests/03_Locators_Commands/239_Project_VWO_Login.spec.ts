@@ -5,7 +5,7 @@ test("TC#1 - Verify that the app.vwo login is not working and gives you an error
 
     await page.goto("https://app.vwo.com/#login");
 
-    // Defalt Locators
+    // Default Locators
     //  id, name, className, Tag., Custom Locator (Via CSS selector)
 
     // Css Seclector ->  Browser - Css Engine, Help you to find the element
@@ -36,6 +36,8 @@ test("TC#1 - Verify that the app.vwo login is not working and gives you an error
     await userNameField.fill("admin@admin.com");
     await passwordField.fill("pass123");
     await loginButton.click();
+
+    console.log("------------");
 
     let error_message = page.locator('#js-notification-box-msg');
     await expect(error_message).toContainText("Your email, password, IP address or location did not match");
